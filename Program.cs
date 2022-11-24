@@ -43,16 +43,29 @@
 
 //Напишите программу, которая принимает на вход два числа и проверяет, является ли одно число квадратом другого.
 
-Console.Write(" Введите первое число ") ;
-int num1 = Convert.ToInt32(Console.ReadLine()) ;
-Console.Write(" Введите второе число ") ;
-int num2 = Convert.ToInt32(Console.ReadLine()) ;
-if(num1 == (int)Math.Pow(num2, 2))
-  Console.WriteLine($" первое число {num1} явл. квадратом второго {num2}") ;
-else 
+//Console.Write(" Введите первое число ") ;
+//int num1 = Convert.ToInt32(Console.ReadLine()) ;
+//Console.Write(" Введите второе число ") ;
+//int num2 = Convert.ToInt32(Console.ReadLine()) ;
+//if(num1 == (int)Math.Pow(num2, 2))
+//  Console.WriteLine($" первое число {num1} явл. квадратом второго {num2}") ;
+//else 
+//{
+//if(num2 == (int)Math.Pow(num1, 2))
+//  Console.WriteLine($" второе число {num2} явл. квадратом первого {num1}") ; 
+//else  
+// Console.WriteLine($" числа {num1} {num2}   не явл. квадратами друг друга") ;
+//}
+
+
+
+// дано натуральное n. вычислить: 1 + 1/2 + 1/3 + 1/4 + ... + 1/n.
+
+Console.Write(" Введите натурально число N не равное нулю ") ;
+int n = Convert.ToInt32(Console.ReadLine()) ;
+double result = 0 ;
+for (double i=1; i<=n; i++)
 {
-if(num2 == (int)Math.Pow(num1, 2))
-  Console.WriteLine($" второе число {num2} явл. квадратом первого {num1}") ; 
-else  
- Console.WriteLine($" числа {num1} {num2}   не явл. квадратами друг друга") ;
+ result= result + 1/i ;
 }
+Console.WriteLine($" результат {result}") ;
