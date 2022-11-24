@@ -61,11 +61,33 @@
 
 // дано натуральное n. вычислить: 1 + 1/2 + 1/3 + 1/4 + ... + 1/n.
 
-Console.Write(" Введите натурально число N не равное нулю ") ;
+//Console.Write(" Введите натурально число N не равное нулю ") ;
+//int n = Convert.ToInt32(Console.ReadLine()) ;
+//double result = 0 ;
+//for (double i=1; i<=n; i++)
+//{
+// result= result + 1/i ;
+//}
+//Console.WriteLine($" результат {result}") ;
+
+
+
+//Вычислить : 1+2+4+8+...+ N в 10 степени
+
+Console.Write(" Введите натурально число N ") ;
 int n = Convert.ToInt32(Console.ReadLine()) ;
-double result = 0 ;
-for (double i=1; i<=n; i++)
+int i ;
+double result=0 ;
+for (i=0; i<=n; i++)
 {
- result= result + 1/i ;
+ if (i>0 && i<2) 
+  result = result+1 ;
+ else 
+ {
+  if (i%2 == 0)
+    result=result+i ;
+ } 
 }
+Console.WriteLine(result) ;
+result =(double)Math.Pow(result, 10) ;
 Console.WriteLine($" результат {result}") ;
