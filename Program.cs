@@ -133,19 +133,41 @@
 //78 -> третьей цифры нет
 //32679 -> 6
 
-Console.Write(" Введите число  ") ;
-int number = Convert.ToInt32(Console.ReadLine()) ;
-int count = 0 ;
-int ostNumber=number ;
-while (ostNumber>1 && count<=3)
+//Console.Write(" Введите число  ") ;
+//int number = Convert.ToInt32(Console.ReadLine()) ;
+//int count = 0 ;
+//int ostNumber=number ;
+//while (ostNumber>1 && count<=3)
+//{
+//    ostNumber=ostNumber/10 ;
+//    count++;
+//}
+//if(count>=3)
+//{
+//    number=(number/100)%10 ; 
+//    Console.WriteLine($" значение третьего разряда -> {number} ") ;
+//}    
+//else 
+//    Console.WriteLine($" Данное число имеет менее трех разрядов");
+
+
+
+//Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+//6 -> да
+//7 -> да
+//1 -> нет
+
+using static System.Console ;
+Clear();
+
+Write(" Введите номер дня недели ") ;
+int n = Convert.ToInt16(ReadLine()) ;
+if (n>=1 && n<=7)
 {
-    ostNumber=ostNumber/10 ;
-    count++;
+    if(n<=5)
+        WriteLine("-> нет") ;
+    else
+        WriteLine(" -> да ") ;
 }
-if(count>=3)
-{
-    number=(number/100)%10 ; 
-    Console.WriteLine($" значение третьего разряда -> {number} ") ;
-}    
 else 
-    Console.WriteLine($" Данное число имеет менее трех разрядов");
+    WriteLine(" Ошибка, при вводе номера дня недели") ;
