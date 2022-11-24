@@ -97,19 +97,32 @@
 //1 + 1/2 + 1/3 + 1/4 + ... + 1/бесконечность.
 //если последнее точность последнего действия меньше чем e , завершаем цикл с помощью break
 
-Console.Write(" Введите натурально число N не равное нулю ") ;
-int n = Convert.ToInt32(Console.ReadLine()) ;
-Console.Write(" Введите точность ряда ( например 0,001) ") ;
-double esp = Convert.ToDouble(Console.ReadLine()) ;
-double LastOper=1 ;
-double result = 0 ;
-double i=1 ;
-for ( i=1; i<=n; i++)
-{ 
-  if( LastOper <= esp )
-    break ;
-result= result + 1/i ; 
-LastOper=1/i ;
-}
-Console.WriteLine($" точность c коротой было вычесленно значение ряда  {LastOper}") ;
-Console.WriteLine($" сумма элементов {result}") ;
+//Console.Write(" Введите натурально число N не равное нулю ") ;
+//int n = Convert.ToInt32(Console.ReadLine()) ;
+//Console.Write(" Введите точность ряда ( например 0,001) ") ;
+//double esp = Convert.ToDouble(Console.ReadLine()) ;
+//double LastOper=1 ;
+//double result = 0 ;
+//double i=1 ;
+//for ( i=1; i<=n; i++)
+//{ 
+//  if( LastOper <= esp )
+//    break ;
+//result= result + 1/i ; 
+//LastOper=1/i ;
+//}
+//Console.WriteLine($" точность c коротой было вычесленно значение ряда  {LastOper}") ;
+//Console.WriteLine($" сумма элементов {result}") ;
+
+
+
+//Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+
+//456 -> 5
+//782 -> 8
+//918 -> 1
+
+Console.Write(" Введите трехзначное число  ") ;
+int number = Convert.ToInt32(Console.ReadLine()) ;
+int sl1=(number/10)%10 ;
+Console.WriteLine($" вторая цифра числа {number} -> {sl1} ") ;
