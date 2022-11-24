@@ -109,7 +109,7 @@ for ( i=1; i<=n; i++)
   if( LastOper <= esp )
     break ;
 result= result + 1/i ; 
-LastOper= (double)1/i ;
+LastOper=1/i ;
 }
 Console.WriteLine($" точность c коротой было вычесленно значение ряда  {LastOper}") ;
 Console.WriteLine($" сумма элементов {result}") ;
