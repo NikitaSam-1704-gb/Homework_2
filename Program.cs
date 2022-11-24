@@ -74,20 +74,42 @@
 
 //Вычислить : 1+2+4+8+...+ N в 10 степени
 
-Console.Write(" Введите натурально число N ") ;
+//Console.Write(" Введите натурально число N ") ;
+//int n = Convert.ToInt32(Console.ReadLine()) ;
+//double result=0 ;
+//for ( int i=0; i<=n; i++)
+//{
+ //if (i>0 && i<2) 
+ // result = result+1 ;
+ //else 
+ //{
+ // if (i%2 == 0)
+ //   result=result+i ;
+ //} 
+//}
+//Console.WriteLine(result) ;
+//result =(double)Math.Pow(result, 10) ;
+//Console.WriteLine($" результат {result}") ;
+
+
+
+// Вычилислить сумму ряда с указанной точность (е = 0.001) 
+//1 + 1/2 + 1/3 + 1/4 + ... + 1/бесконечность.
+//если последнее точность последнего действия меньше чем e , завершаем цикл с помощью break
+
+Console.Write(" Введите натурально число N не равное нулю ") ;
 int n = Convert.ToInt32(Console.ReadLine()) ;
-int i ;
-double result=0 ;
-for (i=0; i<=n; i++)
-{
- if (i>0 && i<2) 
-  result = result+1 ;
- else 
- {
-  if (i%2 == 0)
-    result=result+i ;
- } 
+Console.Write(" Введите точность ряда ( например 0,001) ") ;
+double esp = Convert.ToDouble(Console.ReadLine()) ;
+double LastOper=1 ;
+double result = 0 ;
+double i=1 ;
+for ( i=1; i<=n; i++)
+{ 
+  if( LastOper <= esp )
+    break ;
+result= result + 1/i ; 
+LastOper= (double)1/i ;
 }
-Console.WriteLine(result) ;
-result =(double)Math.Pow(result, 10) ;
-Console.WriteLine($" результат {result}") ;
+Console.WriteLine($" точность c коротой было вычесленно значение ряда  {LastOper}") ;
+Console.WriteLine($" сумма элементов {result}") ;
